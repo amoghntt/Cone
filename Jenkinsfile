@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools { 
-        maven 'M2_HOME' 
+        maven 'MAVEN_HOME' 
         jdk 'JAVA_HOME' 
     }
     stages {
@@ -9,14 +9,14 @@ pipeline {
             steps {
                
                     echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
+                    echo "MAVEN_HOME = ${MAVEN_HOME}"
      
             }
         }
 
         stage ('Build') {
             steps {
-              bat "mvn  test"
+              bat "mvn  clean install"
             }
        
         }
