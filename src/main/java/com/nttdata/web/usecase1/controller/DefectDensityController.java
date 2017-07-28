@@ -35,7 +35,7 @@ public class DefectDensityController {
 	@Autowired
 	private CommonService commonService;
 
-	@RequestMapping(value = "/predictDefectDensityForUseCase1", method = RequestMethod.POST)
+	@RequestMapping(value = "/  predictDefectDensityForUseCase1", method = RequestMethod.POST)
 	public ModelAndView predictUseCase1(@ModelAttribute("configBean") ConfigBean configBean,
 			HttpServletRequest request) {
 		String predictionId = "1";
